@@ -225,32 +225,36 @@ function HeroGeometricClient({
       stars: 4,
     },
   ];
-
-  const getReviewPositions = () => {
-    const isMobile = windowSize.width < 768;
   
+  const isMobile = windowSize.width < 768;
+  const getReviewPositions = () => {
+
     if (isMobile) {
       return [
         { className: "left-[-15%] top-[10%]", direction: "left" },
         { className: "right-[-15%] top-[20%]", direction: "right" }, // Michael Chen moved higher (from 30% to 20%)
-        { className: "left-[-15%] top-[60%]", direction: "left" },   // Aisha Patel moved lower (from 50% to 60%)
+        { className: "left-[-15%] top-[60%]", direction: "left" }, // Aisha Patel moved lower (from 50% to 60%)
         { className: "right-[-15%] top-[70%]", direction: "right" },
       ];
     }
-  
+
     return [
       { className: "left-[5%] top-[20%]", direction: "left" },
       { className: "right-[5%] top-[15%]", direction: "right" },
       { className: "left-[10%] bottom-[15%]", direction: "bottom" },
       { className: "right-[10%] bottom-[20%]", direction: "right" },
     ];
-  };  
+  };
 
   const reviewPositions = getReviewPositions();
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+
+      {isMobile && (
+        <div className="absolute inset-0 bg-[#030303]/80 backdrop-blur-md z-[1]" />
+      )}
 
       <div className="absolute inset-0 overflow-hidden">
         {reviews.map((review, index) => {
@@ -287,7 +291,7 @@ function HeroGeometricClient({
         })}
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
+      <div className="relative z-[2] container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             custom={0}
@@ -357,7 +361,7 @@ function HeroGeometricClient({
                 href="https://discord.gg/hBa9t9qn4w"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-medium rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 flex items-center justify-center gap-2"
+                className="px-6 py-3 backdrop-blur-sm bg-white/10 text-white font-medium rounded-full border border-white/20 hover:bg-white/15 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Discord</span>
                 <Users size={18} />
