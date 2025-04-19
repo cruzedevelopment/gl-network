@@ -9,6 +9,9 @@
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.9.1",
