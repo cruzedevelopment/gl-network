@@ -232,8 +232,8 @@ function HeroGeometricClient({
     if (isMobile) {
       return [
         { className: "left-[-15%] top-[10%]", direction: "left" },
-        { className: "right-[-15%] top-[30%]", direction: "right" },
-        { className: "left-[-15%] top-[50%]", direction: "left" },
+        { className: "right-[-15%] top-[20%]", direction: "right" }, // Michael Chen moved higher (from 30% to 20%)
+        { className: "left-[-15%] top-[60%]", direction: "left" },   // Aisha Patel moved lower (from 50% to 60%)
         { className: "right-[-15%] top-[70%]", direction: "right" },
       ];
     }
