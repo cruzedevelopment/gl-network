@@ -228,23 +228,23 @@ function HeroGeometricClient({
 
   const getReviewPositions = () => {
     const isMobile = windowSize.width < 768;
-
+  
     if (isMobile) {
       return [
-        { className: "left-[-10%] top-[10%]", direction: "left" },
-        { className: "right-[-10%] top-[30%]", direction: "right" },
-        { className: "left-[-8%] top-[50%]", direction: "left" },
-        { className: "right-[-8%] top-[70%]", direction: "right" },
+        { className: "left-[-15%] top-[10%]", direction: "left" },
+        { className: "right-[-15%] top-[30%]", direction: "right" },
+        { className: "left-[-15%] top-[50%]", direction: "left" },
+        { className: "right-[-15%] top-[70%]", direction: "right" },
       ];
     }
-
+  
     return [
       { className: "left-[5%] top-[20%]", direction: "left" },
       { className: "right-[5%] top-[15%]", direction: "right" },
       { className: "left-[10%] bottom-[15%]", direction: "bottom" },
       { className: "right-[10%] bottom-[20%]", direction: "right" },
     ];
-  };
+  };  
 
   const reviewPositions = getReviewPositions();
 
